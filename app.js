@@ -1,6 +1,6 @@
 var express = require('express');
 var helpers = require('./handlers/helpers');
-var configLoadResult = require('dotenv').config({path: 'properties.env'});
+var result = require('dotenv').config({path: 'properties.env'});
 var app = express();
 
 var bodyParser = require('body-parser');
@@ -26,8 +26,8 @@ function four_oh_four(req, res){
     helpers.send_failure(res, helpers.invalid_resource());
 }
 
-if(configLoadResult.error){
-    console.error("Could not load properties file, killing process.");
+if(!process.env.PORT){
+    console.error("Could not load properties, killing process.");
     process.exit();
 } else {
     console.log("Application started running on port " + process.env.PORT);
