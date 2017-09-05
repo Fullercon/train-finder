@@ -1,0 +1,14 @@
+{
+  "name": "national-rail-node-app",
+  "description": "Application that takes a departure and arrival station, and returns details about the next service.",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "async": "0.1.x",
+    "body-parser": "^1.17.2",
+    "express": "4.x",
+    "national-rail-darwin": "1.0.2",
+    "request": "^2.81.0",
+    "dotenv": "4.0.0"
+  }
+}
