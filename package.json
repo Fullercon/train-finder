@@ -3,6 +3,14 @@
   "description": "Application that takes a departure and arrival station, and returns details about the next service.",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "8.3.0"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+
   "dependencies": {
     "async": "0.1.x",
     "body-parser": "^1.17.2",
